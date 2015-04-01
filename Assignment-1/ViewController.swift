@@ -12,11 +12,10 @@ class ViewController: UIViewController, UITextFieldDelegate, Resetable {
     @IBOutlet weak var titleLabel: ResetOnTapLabel!
     @IBOutlet weak var labelReplacementText: UITextField!
     
-    let tap = UITapGestureRecognizer()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+    
+        var tap = UITapGestureRecognizer()
         tap.addTarget(self, action: "reset:")
         view.addGestureRecognizer(tap)
         
